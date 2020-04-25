@@ -10,9 +10,9 @@ Request:
 - Method: **POST**
 - Headers: N/A
 - Params:
-  - userName: string
-  - password: string (MD5 hash)
-  - uniqueId: UUID (without dashes)
+  - **userName**: string
+  - **password**: string (MD5 hash)
+  - **uniqueId**: UUID (without dashes)
 
 Response:
 - Wrong login:
