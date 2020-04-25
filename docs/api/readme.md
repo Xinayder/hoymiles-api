@@ -7,3 +7,4 @@ Every method documented here assumes both a JSON param body and response.
 - [Get station info](/hoymiles-api/api/getbyid)
 - [Login](/hoymiles-api/api/login)
 - [Search organizations](/hoymiles-api/api/searchorganizations)
+- [List all inverter error codes](/hoymiles-api/api/viewallerrcode)
