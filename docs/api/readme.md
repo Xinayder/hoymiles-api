@@ -4,5 +4,6 @@ The Hoymiles website provides an API to retrieve data from its devices. Although
 
 Every method documented here assumes both a JSON param body and response.
 
-- [Login](/hoymiles-api/api/login)
 - [Get station info](/hoymiles-api/api/getbyid)
+- [Login](/hoymiles-api/api/login)
+- [Search organizations](/hoymiles-api/api/searchorganizations)
