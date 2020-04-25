@@ -1,9 +1,3 @@
-# API documentation
-
-The Hoymiles website provides an API to retrieve data from its devices. Although it's not documented anywhere, through reverse engineering we can create our own implementation to obtain data from their website.
-
-Every method documented here assumes both a JSON param body and response.
-
 ### Login
 
 By looking at their website, the API endpoint for logging in requires a username, password and a UUID. The UUID is used to identify the client logging in, although at each login, the UUID changes. The password is a simple MD5 hash of the account's password, there's no salt or other crypto functions such as scrypt or bcrypt. 
@@ -22,15 +16,16 @@ Request:
 
 Response:
 - Wrong login:
-  - ```json
+```json
     {
         "status": "1", 
         "message": "wrong account or password",
         "data": ""
     }
-  ```
+```
+
 - Correct login:
-  - ```json
+```json
   {
       "status": "0",
       "message": "success",
@@ -49,5 +44,5 @@ Response:
           "token": "string"
       }
   }
-  ```
+```
 
