@@ -4,6 +4,8 @@ By looking at their website, the API endpoint for logging in requires a username
 
 On a successful login, the response returns an authentication token, used for querying realtime data from Hoymiles devices.
 
+The `uniqueId` param on the official website uses a UUID, though there's no server-side check for a valid UUID string, meaning you can input any string you'd like, as it's used to identify the client logging in.
+
 Request:
 
 - URL: `/permission/system/0/admin/login`
@@ -12,7 +14,7 @@ Request:
 - Params:
   - **userName**: string
   - **password**: string (MD5 hash)
-  - **uniqueId**: UUID (without dashes)
+  - **uniqueId**: string
 
 Response:
 - Wrong login:
@@ -32,7 +34,7 @@ Response:
       "data": {
           "organizationType": "int as string",
           "userInfo": "string",
-          "agreeGdpr": null,
+          "agreeGdpr": "int as string",
           "loginType": "int as string",
           "isOZhou": "string",
           "companyName": "string",
