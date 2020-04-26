@@ -9,12 +9,12 @@ The intervals the Hoymiles devices use for reporting data alternates between 15 
 - Headers:
   - Authorization
 - Params:
-  - **_cycle_**: string (valid values are: day, week, month, year, total)
+  - _cycle_: string (valid values are: day, week, month, year, total)
   - **endTime**: string (formatted as YYYY-MM-DD HH:mm:ss)
-  - **_interval_**: int (don't know, in doubt use 0)
+  - _interval_: int (don't know, in doubt use 0)
   - **startTime**: string (formatted as YYYY-MM-DD HH:mm:ss)
   - **stationId**: string (station ID int as string)
-  - **_type_**: int (default: 2; valid values: 2, 5)
+  - _type_: int (default: 2; valid values: 2, 5)
     - If the type parameter is `5`, the response JSON is [different](#detailed-response).
 - Response:
 ```json
