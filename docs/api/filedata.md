@@ -4,7 +4,7 @@ This endpoint returns historical data about the solar station. For realtime data
 
 The intervals the Hoymiles devices use for reporting data alternates between 15 and 60 minutes. There are up to 64 entries in the response JSON for the day you want to query. Each entry in the top-most `data` field represents a day.
 
-- URL: ``
+- URL: `/zhgf-core/api/0/liveStationMiPortApi/fileData`
 - Method: **POST**
 - Headers:
   - Authorization
