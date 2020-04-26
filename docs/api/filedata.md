@@ -2,7 +2,7 @@
 
 This endpoint returns historical data about the solar station. For realtime data, you must choose both start and end dates for the day you want to query. E.g.: assuming May 4th 2020 is today, you can query realtime data by setting `startTime` to `2020-05-04 00:00:00` and `endTime` to `2020-05-04 23:59:59`.
 
-The intervals the Hoymiles devices use for reporting data alternates between 15 and 60 minutes. There are up to 64 entries in the response JSON for the day you want to query.
+The intervals the Hoymiles devices use for reporting data alternates between 15 and 60 minutes. There are up to 64 entries in the response JSON for the day you want to query. Each entry in the top-most `data` field represents a day.
 
 - URL: ``
 - Method: **POST**
@@ -52,6 +52,6 @@ As you can see, there's a data field for each day entry in the response. It's an
   - unknown: bool (probably related to sunlight)
   - **energy generated (accumulated)**: int
 
-If the date you're querying refers to historical data (i.e. past dates), the `data` field will return a link to a JSON file containing the historical data for the day specified. Each entry in the first `data` array in the response above represents a day.
+If the date you're querying refers to historical data (i.e. past dates), the `data` field will return a link to a JSON file containing the historical data for the day specified.
 
-The link to the JSON file has the following format: `https://station-data.hoymiles.com/{stationId}/{year}/{month}/{day}/{stationId}.json`. The file contains an array of arrays, just like as querying for realtime data, and the arrays follow the same format as specified above.
+The link to the JSON file has the following format: `https://station-data.hoymiles.com/{stationId}/{year}/{month}/{day}/{stationId}.json`. The file contains an array of arrays, just like as querying for realtime data, and it follows the same format as specified above.
